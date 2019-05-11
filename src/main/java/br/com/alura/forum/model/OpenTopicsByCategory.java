@@ -1,8 +1,8 @@
 package br.com.alura.forum.model;
 
-import java.sql.Date;
 import java.time.LocalDate;
 import java.time.ZoneId;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,17 +11,20 @@ import javax.persistence.Id;
 
 @Entity
 public class OpenTopicsByCategory {
-
+	
 	@Id
-	@GeneratedValue(strategy= GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
+	
 	private String categoryName;
+	
 	private int topicCount;
+	
 	private LocalDate date;
+	
 	
 	@Deprecated
 	public OpenTopicsByCategory() {
-		
 	}
 	
 	public OpenTopicsByCategory(String categoryName, Number topicCount, Date instant) {
@@ -46,14 +49,6 @@ public class OpenTopicsByCategory {
 		this.categoryName = categoryName;
 	}
 
-	public LocalDate getDate() {
-		return date;
-	}
-
-	public void setDate(LocalDate date) {
-		this.date = date;
-	}
-
 	public int getTopicCount() {
 		return topicCount;
 	}
@@ -61,6 +56,15 @@ public class OpenTopicsByCategory {
 	public void setTopicCount(int topicCount) {
 		this.topicCount = topicCount;
 	}
+
+	public LocalDate getDate() {
+		return date;
+	}
+
+	public void setDate(LocalDate date) {
+		this.date = date;
+	}
+	
 	
 	
 }

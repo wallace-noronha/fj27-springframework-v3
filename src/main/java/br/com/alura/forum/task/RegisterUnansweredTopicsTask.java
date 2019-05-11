@@ -12,6 +12,7 @@ import br.com.alura.forum.repository.TopicRepository;
 
 @Component
 public class RegisterUnansweredTopicsTask {
+	
 	@Autowired
 	private TopicRepository topicRepository;
 	
